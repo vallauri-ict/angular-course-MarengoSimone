@@ -1,6 +1,8 @@
 # AngularCourse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+_Stud. Marengo Simone_
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7. That's the first project of the year using Angular.
 
 ## Development server
 
