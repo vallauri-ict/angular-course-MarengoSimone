@@ -4,7 +4,7 @@
 </h4> -->
 
 <!-- usiamo una direttiva più potente: ngClass - ogni classe viene applicata se viene soddisfatta la sua condizione-->
-<p class="cliccable" [ngClass]="{ 
+<span class="cliccable" [ngClass]="{ 
     'female': student.gender=='F',
     'male': student.gender=='M',
     'underlined': student.hobby=='Paddle'}" (click)="onStudentClick()">
@@ -16,4 +16,4 @@
         <span>(dilettante)</span>
     </ng-template>
      - {{ student.hobby }}
-</p>
+</span>

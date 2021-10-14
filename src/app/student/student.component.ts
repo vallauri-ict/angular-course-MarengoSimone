@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -6,40 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+@Input() student:any;
 
-  // creazione lista studenti
-  studentList = [
-    { name: 'Ettore Esposito', hobby: 'Karate', gender: 'M',isPro:false },
-    { name: 'Luca Pelissero', hobby: 'Arrampicata', gender: 'M',isPro:true },
-    { name: 'Bianca Teleman', hobby: 'Volley', gender: 'F',isPro:false },
-    { name: 'Chiara Giordano', hobby: 'Volley', gender: 'F',isPro:true },
-    { name: 'Michele Ghisolfi', hobby: 'Judo', gender: 'M',isPro:false },
-    { name: 'Simone Marengo', hobby: 'Paddle', gender: 'M',isPro:true },
-    { name: 'Paolo Vietti', hobby: 'Paddle', gender: 'M',isPro:false },
-    { name: 'Federico Mameli', hobby: 'Danza', gender: 'M',isPro:false },
-    { name: 'Lorenzo Cravero', hobby: 'Calcio', gender: 'M',isPro:true },
-    { name: 'Marta Baudracco', hobby: 'Volley', gender: 'F',isPro:true },
-    { name: 'Edoardo Ababei', hobby: 'Palestra', gender: 'M',isPro:false },
-    { name: 'Ivan Anjelovski', hobby: 'Palestra', gender: 'M',isPro:true }
-  ]
-
-  student: any;
-
-  constructor() {
-    // tutte le volte che viene istanziato uno studente ne viene preso uno a caso nella lista
-    this.randomStudent();
-  }
-
-  private randomStudent() {
-    let num = Math.floor(Math.random() * this.studentList.length);
-    this.student = this.studentList[num];
-  }
+  constructor() {}
 
   ngOnInit(): void {
+    this.randomStudentPro();
   }
 
   onStudentClick() {
-    this.randomStudent();
+    this.student.isPro = !this.student.isPro;
+  }
+
+  private randomStudentPro() {
+    let num = Math.floor(Math.random() * 2);
+    this.student.isPro =  (num==1);
   }
 
 }
