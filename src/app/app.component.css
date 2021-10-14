@@ -23,6 +23,7 @@ h6, .student {
 
 .student span {
     min-width: 40px;
+    display: inline-block;
 }
 
 p {
