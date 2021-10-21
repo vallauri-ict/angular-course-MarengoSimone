@@ -16,6 +16,19 @@ h6, .student {
     margin: 8px 0;
 }
 
+button{
+    background-color: #1976d2;
+    padding:10px;
+    margin:20px auto;
+    border-radius: 4px;
+    color: whitesmoke;
+}
+
+button:disabled{
+    background-color: whitesmoke;
+    color: gray;
+}
+
 .student {
     min-width: 350px;
     text-align: left;

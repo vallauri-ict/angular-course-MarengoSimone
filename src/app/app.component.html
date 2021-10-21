@@ -28,6 +28,11 @@
       <span>{{ title }} APP IS RUNNING!</span>
   </div>
 
+  <h2>Add student:</h2>
+  <label for="txtName"> Student Name: </label>
+  <input type="text" id="txtName" #txtName [(ngModel)]="studentName">
+  <button [disabled]="studentName.length==0" (click)="onAddStudent()">Add Student</button>
+
   <h2>The Students:</h2>
   <!-- istanze studenti con *ngfor -->
   <!--<div *ngFor="let item of studentList">

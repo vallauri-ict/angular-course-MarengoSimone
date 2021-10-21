@@ -4,10 +4,13 @@
 </h4> -->
 
 <!-- usiamo una direttiva più potente: ngClass - ogni classe viene applicata se viene soddisfatta la sua condizione-->
-<span class="cliccable" [ngClass]="{ 
-    'female': student.gender=='F',
-    'male': student.gender=='M',
-    'underlined': student.hobby=='Paddle'}" (click)="onStudentClick()">
+<span class="cliccable" [ngClass]=
+    "{ 
+        'female': student.gender=='F',
+        'male': student.gender=='M',
+        'underlined': student.hobby=='Paddle'
+    }" 
+    (click)="onStudentClick()">
     {{ student.name }}
    <!-- <span *ngIf="student.isPro">(professionista)</span>
     <span *ngIf="!student.isPro">(dilettante)</span>-->
