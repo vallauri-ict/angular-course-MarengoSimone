@@ -1,8 +1,8 @@
-# AngularCourse
+# Project 1: introudzione_angular
 
-_Stud. Marengo Simone_
+## _Stud. Marengo Simone_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7. That's the first project of the year using Angular.
+That's the first project of the year using Angular. We are developing some base functions and learning how Angular works. We have already developed **ngFor, ngIf, ngClass and ngModel**.
 
 ## Development server
 
