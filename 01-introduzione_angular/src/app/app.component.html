@@ -31,6 +31,23 @@
   <h2>Add student:</h2>
   <label for="txtName"> Student Name: </label>
   <input type="text" id="txtName" #txtName [(ngModel)]="studentName">
+  
+  <div class="gender-selection">
+    <div>
+      <input id="male" type="radio" value="M" name="gender" [(ngModel)]="studentGender">
+      <label for='male'>Male</label>
+    </div>
+    <div>
+      <input id="female" type="radio" value="F" name="gender" [(ngModel)]="studentGender">
+      <label for='female'>Female</label>
+    </div>
+  </div>
+  
+<select class="hobbie-selection" [(ngModel)]="studentHobbie">
+    <option *ngFor="let hobbie of hobbies" [value]="hobbie">
+      {{hobbie}}
+    </option>
+  </select>
   <button [disabled]="studentName.length==0" (click)="onAddStudent()">Add Student</button>
 
   <h2>The Students:</h2>

@@ -19,7 +19,7 @@ h6, .student {
 button{
     background-color: #1976d2;
     padding:10px;
-    margin:20px auto;
+    margin:16px auto;
     border-radius: 4px;
     color: whitesmoke;
 }
@@ -27,6 +27,19 @@ button{
 button:disabled{
     background-color: whitesmoke;
     color: gray;
+}
+
+.gender-selection>div{
+    display: inline;
+}
+
+.gender-selection{
+    margin: 10px auto;
+}
+
+.hobbie-selection{
+    width: 110px;
+    margin: 10px auto;
 }
 
 .student {
