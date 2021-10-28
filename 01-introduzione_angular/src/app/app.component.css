@@ -29,6 +29,13 @@ button:disabled{
     color: gray;
 }
 
+button.delete{
+    background-color: lightcoral;
+    margin-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .gender-selection>div{
     display: inline;
 }

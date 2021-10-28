@@ -52,4 +52,8 @@ export class AppComponent {
     this.studentName = "";
     this.txtName.nativeElement.focus();
   }
+
+  onDeleteStudent(index:number){
+    this.studentList.splice(index,1);
+  }
 }
