@@ -35,18 +35,18 @@ export class AppComponent {
     for(let i = 0;i < 4;i++)
     {
       let num = Math.floor(Math.random() * this.studentRepository.length);
-      let tempStudent = this.studentRepository[num];
+      let tempStudent:any = this.studentRepository[num];
       this.studentList.push(tempStudent);
       this.studentRepository.splice(num,1);
     }
   }
 
   onAddStudent(){
-    let newStudent = {
+    let newStudent:any = {
       name:this.studentName, 
       hobby: this.studentHobbie,
       gender:this.studentGender,
-      isPro:true
+      isPro:true,
     };
     this.studentList.push(newStudent);
     this.studentName = "";
@@ -55,5 +55,10 @@ export class AppComponent {
 
   onDeleteStudent(index:number){
     this.studentList.splice(index,1);
+  }
+
+  onStudentDeleteEvent(student:any){
+    //alert("Da cancellare: " + student.name);
+    this.studentList.splice(this.studentList.indexOf(student),1);
   }
 }
